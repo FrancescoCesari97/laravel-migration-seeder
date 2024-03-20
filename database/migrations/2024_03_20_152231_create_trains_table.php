@@ -14,9 +14,12 @@ return new class extends Migration {
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
+
             $table->string('company');
             $table->string('departure station');
             $table->string('arrive station');
+
+            // $table->boolean('highspeed');
 
             $table->time('departure time');
             $table->time('arrive time');
@@ -24,6 +27,7 @@ return new class extends Migration {
             $table->tinyInteger('carriages');
             $table->boolean('on time');
             $table->boolean('canceled');
+            $table->enum('type', ['Regionale', 'Frecciarossa', 'Frecciabianca']);
             $table->timestamps();
         });
     }
