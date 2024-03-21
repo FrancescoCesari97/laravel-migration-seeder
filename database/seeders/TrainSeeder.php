@@ -17,6 +17,11 @@ class TrainSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        $file = fopen(__DIR__ . '/../csv/train.csv', 'r');
+        while (!feof($file)) {
+            var_dump(fgetcsv($file));
+        }
+
         // $trains_data = [
         //     [
         //         'company' => 'Trenitalia',
