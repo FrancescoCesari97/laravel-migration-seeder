@@ -16,16 +16,16 @@ return new class extends Migration {
             $table->id();
 
             $table->string('company');
-            $table->string('departure station');
-            $table->string('arrive station');
+            $table->string('departure_station');
+            $table->string('arrive_station');
 
             // $table->boolean('highspeed');
 
-            $table->time('departure time');
-            $table->time('arrive time');
-            $table->string('train code', 8);
+            $table->time('departure_time');
+            $table->time('arrive_time');
+            $table->string('train_code', 8);
             $table->tinyInteger('carriages');
-            $table->boolean('on time');
+            $table->boolean('on_time');
             $table->boolean('canceled');
             $table->enum('type', ['Regionale', 'Frecciarossa', 'Frecciabianca']);
             $table->timestamps();

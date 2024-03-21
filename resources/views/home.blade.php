@@ -16,12 +16,12 @@
             @forelse ($trains as $train)
                 <ul>
                     <li>{{ $train['company'] }} </li>
-                    <li> {{ $train['departure station'] }}</li>
-                    <li> {{ $train['arrive station'] }}</li>
-                    <li> {{ $train['departure time'] }} </li>
-                    <li> {{ $train['arrive time'] }} </li>
-                    <li> {{ $train['train code'] }}</li>
-                    <li> {{ $train['on time'] ? 'Yes' : 'No' }} </li>
+                    <li> {{ $train['departure_station'] }}</li>
+                    <li> {{ $train['arrive_station'] }}</li>
+                    <li> {{ $train['departure_time'] }} </li>
+                    <li> {{ $train['arrive_time'] }} </li>
+                    <li> {{ $train['train_code'] }}</li>
+                    <li> {{ $train['on_time'] ? 'Yes' : 'No' }} </li>
                     <li> {{ $train['type'] }} </li>
 
                 </ul>
