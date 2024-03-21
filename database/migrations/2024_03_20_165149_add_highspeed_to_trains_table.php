@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->boolean('highspeed');
+            $table->boolean('highspeed')->default(false);
         });
     }
 

@@ -25,9 +25,9 @@ return new class extends Migration {
             $table->time('arrive_time');
             $table->string('train_code', 8);
             $table->tinyInteger('carriages');
-            $table->boolean('on_time');
-            $table->boolean('canceled');
-            $table->enum('type', ['Regionale', 'Frecciarossa', 'Frecciabianca']);
+            $table->boolean('on_time')->default(true);
+            $table->boolean('canceled')->default(false);
+            $table->enum('type', ['Regionale', 'Frecciarossa', 'Frecciabianca'])->default('Regionale');
             $table->timestamps();
         });
     }
