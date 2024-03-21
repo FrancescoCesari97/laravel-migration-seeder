@@ -47,18 +47,19 @@ class TrainSeeder extends Seeder
         foreach ($trains_data as $train_data) {
             # code...
             $train = new Train();
+            $train->fill($train_data);
 
-            $train->company = $train_data['company'];
-            $train->departure_station = $train_data['departure_station'];
-            $train->arrive_station = $train_data['arrive_station'];
-            $train->departure_time = $train_data['departure_time'];
-            $train->arrive_time = $train_data['arrive_time'];
-            $train->train_code = $train_data['train_code'];
-            $train->carriages = $train_data['carriages'];
-            $train->on_time = $train_data['on_time'];
-            $train->canceled = $train_data['canceled'];
-            $train->type = $train_data['type'];
-            $train->highspeed = $train_data['highspeed'];
+            // $train->company = $train_data['company'];
+            // $train->departure_station = $train_data['departure_station'];
+            // $train->arrive_station = $train_data['arrive_station'];
+            // $train->departure_time = $train_data['departure_time'];
+            // $train->arrive_time = $train_data['arrive_time'];
+            // $train->train_code = $train_data['train_code'];
+            // $train->carriages = $train_data['carriages'];
+            // $train->on_time = $train_data['on_time'];
+            // $train->canceled = $train_data['canceled'];
+            // $train->type = $train_data['type'];
+            // $train->highspeed = $train_data['highspeed'];
 
             $train->save();
         }
