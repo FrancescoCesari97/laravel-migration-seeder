@@ -28,6 +28,8 @@
                 <hr>
             @empty
             @endforelse
+
+            {{ $trains->links() }}
         </div>
     </section>
 
